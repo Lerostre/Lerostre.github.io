@@ -17,12 +17,15 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body{
 	background: beige;
+	position: relative;
 	color: beige;
 	font-family: "Helvetica";
+	min-height: 100vh;
 }
 
 
@@ -139,7 +142,10 @@ body{
 }
 
 .main{
+	position: absolute;
 	padding: 10%;
+	padding-bottom: 0;
+	top: 100%;
 	display: inline-block;
 	background: beige;
 }
@@ -152,7 +158,7 @@ body{
 	position: absolute;
 	text-align: center;
 	left: 40%;
-	top: 800px;
+	top: 1.5%;
 	font-size: 50px;
 	color: #ed6161;
 }
@@ -164,11 +170,14 @@ body{
 	margin: 20px;
 	position: relative;
 	z-index: 9;
+	background: #f5a7a7;
+	transition: .3s ease;
 }
 
 .portrait{
   transition: all .15s linear;
   background-color: transparent;
+  transition: .3s ease;
 }
 
 .image {
@@ -177,7 +186,6 @@ body{
   max-width: 100%;
   height: auto;
   transition: all .15s linear;
-  transition: box-shadow 0.15s ease-in-out;
   backface-visibility: hidden;
 }
 
@@ -226,7 +234,6 @@ body{
 
 .portrait:hover .image{
   opacity: 0.4;
-  box-shadow: 5px 5px 10px rgb(120, 0, 0, 0.5);
 }
 
 .portrait:hover .middle{
@@ -278,13 +285,15 @@ body{
 	color: #ed6161;
 	padding-top: 5px;
 	font-size: 18px;
+	background: beige;
 }
 
 .contacts{
 	margin: auto;
+	left: 5%;
   	display: flex;
-  	margin-left: 20px;
   	justify-content: center;
+  	background: beige;
 }
 
 .contacts a{
@@ -304,26 +313,38 @@ body{
 }
 
 footer{
+	position: relative;
+	bottom: -10%;
+	margin-top: 65px;
 	border-top: 5px solid #4d9c05;
 	background: #ed6161;
-	padding-left: 15%;
+	padding-left: 25%;
+	padding-right: auto;
 	padding-top: 15px;
 	padding-bottom: 5px;
+	left: -20%;
+	width: 107.5%;
 	height:75px;
 }
 
+.right{
+	position: absolute;
+	float: right;
+	display: inline;
+	padding-top: 20px;
+	padding-right: 15%;
+	text-align: center;
+	top: 0;
+	right: 0;
+}
 
 .quot{
-	position: relative;
-	float: right;
-	margin-bottom: 5px;
 	margin-right: 20%;
 }
 
 .ls{
-	position: relative;
-	float: right;
-	margin-bottom: 15px;
+	top: 0;
+	right:0;
 	margin-right: 20%;
 	font-size: 15px;
 	list-style-type: none;
